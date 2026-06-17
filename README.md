@@ -3,16 +3,20 @@ simulating employee capacities and customer wait queues
 
 This is an enhancement to the simPy sample code found here: ["Simulating Real-World Processes With SimPy."](https://realpython.com/simulation-with-simpy/)
 
-I found the original code to be lacking in detail.  It only gave out one final result (average wait time).
-I could not see what was happening in the middle of movie theater operations from the perspective of the employees or the guests.  So I added more lines to declare events taking place and how long wait times and queues grow or decrease.
+I found the original results hard to interpret and follow, since it only outputs a few end result summary metrics.
 
-The simulation (created by executing one of the .py files) saves the event log into CSV files
+I modified the script to generate a CSV file that outputs what happens during the movie theater's operations every 15 seconds.
 
-After simulation, the python notebooks (ipynb) creates time series graphs visualizing the queue lines and changing capacities of the movie theatre staff.
+Using this CSV, visualizations are made (shown in the ipynb) to show how busy each team in the movie theater gets while the theater is open.
 
-Sidenote: different revisions to the simulation script were made in order to capture detail in the CSVs necessary for what I wanted to portray in the time series graphs.
+The visualizations would show when the cashier and food teams are operating at capacity, if lines get too long, or if it takes too long for customers to be processed from the time they arrive at the theater, to when they get into their seats.
 
+Some additional behavioral scenarios can be added in the future to make this simulation more realistic:
+1) Small % chance a customer leaves and goes home after becoming impatient in the long line
+2) Small % chance of an outlier food team disaster that holds back everyone's food
+3) Cashier needs the bathroom but there are no replacement cashiers to cover for him/her
 
+Use the HTMLs as alternatives for viewing the time series graphs if the ipynb doesnt work for you.
 
 ## Running the Script
 
